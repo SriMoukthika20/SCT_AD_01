@@ -1,0 +1,21 @@
+Project Description
+
+This project is a simple yet effective Calculator application built with Python and Gradio. It allows users to perform the four basic arithmetic operations—addition, subtraction, multiplication, and division—through an interactive and user-friendly web interface.
+
+The calculator accepts two numeric inputs and lets users choose an operation via a radio button. Results are displayed instantly when the "Calculate" button is clicked. Division by zero is handled gracefully with an error message instead of crashing the app, ensuring a smooth user experience.
+
+The app is lightweight, easy to set up, and can run directly in Google Colab or locally on your machine with minimal configuration. By using Gradio, the project avoids the need for complex frontend development and offers a clean, responsive interface that works across devices.
+
+Key Highlights
+
+Perform basic arithmetic: add, subtract, multiply, and divide
+
+Division by zero is safely handled with clear error messages
+
+Simple, intuitive, and responsive interface built with Gradio
+
+Works seamlessly in Google Colab (ideal for quick demos) or locally
+
+Beginner-friendly project for learning Python + Gradio integration
+
+This calculator app is perfect for students, beginners, or developers who want to understand how to build interactive applications quickly with Python. It also serves as a foundation for extending functionality, such as adding advanced mathematical operations, memory storage, or a scientific calculator mode.
