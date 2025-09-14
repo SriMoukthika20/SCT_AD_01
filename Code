@@ -1,0 +1,44 @@
+!pip install gradio
+
+import gradio as gr
+
+# -------------------------
+# Core Calculator Logic
+# -------------------------
+def calculator(num1, num2, operation):
+    try:
+        if operation == "Add":
+            return num1 + num2
+        elif operation == "Subtract":
+            return num1 - num2
+        elif operation == "Multiply":
+            return num1 * num2
+        elif operation == "Divide":
+            return "Error: Division by zero" if num2 == 0 else num1 / num2
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+# -------------------------
+# Gradio UI
+# -------------------------
+with gr.Blocks() as demo:
+    gr.Markdown("## 🧮 Calculator App")
+
+    with gr.Row():
+        num1 = gr.Number(label="Enter First Number")
+        num2 = gr.Number(label="Enter Second Number")
+
+    operation = gr.Radio(
+        ["Add", "Subtract", "Multiply", "Divide"],
+        label="Select Operation"
+    )
+
+    output = gr.Textbox(label="Result")
+
+    calc_btn = gr.Button("Calculate")
+    calc_btn.click(calculator, [num1, num2, operation], output)
+
+# -------------------------
+# Launch App
+# -------------------------
+demo.launch()
